@@ -1,0 +1,1140 @@
+[
+  {
+    "id": "TC001",
+    "title": "Log in and reach the appropriate workspace",
+    "description": "This verifies that a staff member can sign in with email and password and is routed into the correct authenticated workspace.",
+    "category": "User Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the authenticated workspace is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Create a new assessor activity",
+    "description": "This verifies that an assessor can create and save a new field activity with its required details and see it added to the agenda list.",
+    "category": "Assessor Activity Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda"
+      },
+      {
+        "type": "action",
+        "description": "Start a new activity entry"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the category field with a valid category"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the date field with a valid date"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the resolution field with a unique resolution description"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the expense field with a valid expense amount"
+      },
+      {
+        "type": "action",
+        "description": "Save the activity record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new activity appears in the agenda list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Open super administrator cockpit",
+    "description": "This verifies that a super administrator can access the dedicated admin cockpit from the authenticated portal.",
+    "category": "deviktor-sys",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /deviktor-sys"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the super administrator cockpit is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Edit an assessor activity",
+    "description": "This verifies that an assessor can open an existing activity, update its details, and see the saved changes reflected in the agenda list.",
+    "category": "Assessor Activity Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda"
+      },
+      {
+        "type": "action",
+        "description": "Start a new activity entry"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the category field with a valid category"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the date field with a valid date"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the resolution field with a unique resolution description"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the expense field with a valid expense amount"
+      },
+      {
+        "type": "action",
+        "description": "Save the activity record"
+      },
+      {
+        "type": "action",
+        "description": "Open the activity for editing"
+      },
+      {
+        "type": "action",
+        "description": "Update the activity details"
+      },
+      {
+        "type": "action",
+        "description": "Save the edited activity record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated activity is shown in the agenda list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Delete an assessor activity",
+    "description": "This verifies that an assessor can delete an existing activity after confirming the action and no longer see it in the agenda list.",
+    "category": "Assessor Activity Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda"
+      },
+      {
+        "type": "action",
+        "description": "Start a new activity entry"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the category field with a valid category"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the date field with a valid date"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the resolution field with a unique resolution description"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the expense field with a valid expense amount"
+      },
+      {
+        "type": "action",
+        "description": "Save the activity record"
+      },
+      {
+        "type": "action",
+        "description": "Delete the activity record"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the deletion"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted activity is no longer shown in the agenda list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Create a new briefing and save it",
+    "description": "This verifies that a briefing-access user can create a briefing, save it, and see it appear in the briefing list.",
+    "category": "Briefings Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings module"
+      },
+      {
+        "type": "action",
+        "description": "Open the new briefing form"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the briefing content with valid details"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new briefing appears in the briefing list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "See executive dashboard indicators",
+    "description": "This verifies that an authenticated user can open the dashboard and view the key cabinet indicators needed for daily oversight.",
+    "category": "Executive KPI Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the dashboard navigation entry"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify executive dashboard indicators are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard summary cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Create a briefing and open its print view",
+    "description": "This verifies that a briefing-access user can save a briefing and open a print-ready version of it.",
+    "category": "briefings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /briefings"
+      },
+      {
+        "type": "action",
+        "description": "Start a new briefing"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the briefing title with a unique title"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the briefing content with a unique briefing summary"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing"
+      },
+      {
+        "type": "action",
+        "description": "Open the briefing print view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a print-ready briefing view is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Claim a communication task role",
+    "description": "This verifies that an authenticated communication user can claim an available production role on a task and see that assignment reflected in the board.",
+    "category": "Communication Claiming Board",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the communication agenda module"
+      },
+      {
+        "type": "action",
+        "description": "Click an available communication task"
+      },
+      {
+        "type": "action",
+        "description": "Claim a production role on the task"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the task shows the role as assigned to the current user"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Edit an existing briefing",
+    "description": "This verifies that a briefing-access user can update an existing briefing and see the saved content reflected afterward.",
+    "category": "briefings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /briefings"
+      },
+      {
+        "type": "action",
+        "description": "Start a new briefing"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the briefing title with a unique title"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the briefing content with a unique briefing summary"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing"
+      },
+      {
+        "type": "action",
+        "description": "Open the briefing for editing"
+      },
+      {
+        "type": "action",
+        "description": "Update the briefing content"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated briefing is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Filter communication tasks by editorial criteria",
+    "description": "This verifies that an authenticated communication user can filter the task board by format or theme and see the list update accordingly.",
+    "category": "Communication Claiming Board",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the communication agenda module"
+      },
+      {
+        "type": "action",
+        "description": "Select a media format filter"
+      },
+      {
+        "type": "action",
+        "description": "Select a theme filter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the task list updates to reflect the selected filters"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Use a dashboard quick action to open a module",
+    "description": "This verifies that a user can launch an operational module from the dashboard quick actions and arrive at the correct destination.",
+    "category": "Executive KPI Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click a dashboard quick action for an operational module"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected module is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Edit an existing briefing and keep the changes",
+    "description": "This verifies that a briefing-access user can open an existing briefing, update its details, save them, and see the updated briefing reflected in the list.",
+    "category": "Briefings Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings module"
+      },
+      {
+        "type": "action",
+        "description": "Open an existing briefing for editing"
+      },
+      {
+        "type": "action",
+        "description": "Update the briefing content with valid changes"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated briefing is shown in the list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Open the printable agenda report",
+    "description": "This verifies that an assessor can request a print-ready agenda view for the current records.",
+    "category": "Assessor Activity Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda"
+      },
+      {
+        "type": "action",
+        "description": "Request a printable agenda report"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a print-ready agenda view is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Filter communication tasks by format and theme",
+    "description": "This verifies that a communication user can narrow the task board using task filters and see matching items remain visible.",
+    "category": "agenda-comunicacao",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda-comunicacao"
+      },
+      {
+        "type": "action",
+        "description": "Select a format filter"
+      },
+      {
+        "type": "action",
+        "description": "Select a theme filter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the filtered communication tasks are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC016",
+    "title": "Navigate across official modules from the portal",
+    "description": "This verifies that an authenticated internal user can move between the executive dashboard, official calendar, briefings, and official letters modules.",
+    "category": "Root workspace routing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the dashboard navigation entry"
+      },
+      {
+        "type": "action",
+        "description": "Click the official calendar navigation entry"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings navigation entry"
+      },
+      {
+        "type": "action",
+        "description": "Click the official letters navigation entry"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the target module is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC017",
+    "title": "Preserve briefing links to official agenda events",
+    "description": "This verifies that a briefing-access user can view a briefing associated with an official agenda event and confirm the linked event remains visible after edits.",
+    "category": "Briefings Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings module"
+      },
+      {
+        "type": "action",
+        "description": "Open a briefing linked to an official agenda event"
+      },
+      {
+        "type": "action",
+        "description": "Update the briefing details"
+      },
+      {
+        "type": "action",
+        "description": "Save the briefing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the linked official event is still shown with the briefing"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Open linked official agenda events from a briefing",
+    "description": "This verifies that a briefing with linked official events exposes the related agenda entries to the user.",
+    "category": "briefings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /briefings"
+      },
+      {
+        "type": "action",
+        "description": "Open a briefing that is linked to official agenda events"
+      },
+      {
+        "type": "action",
+        "description": "Open the linked official agenda event list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the linked official agenda events are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Manage profile settings",
+    "description": "This verifies that an authenticated user can open the profile page and view their personal settings.",
+    "category": "profile",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /profile"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the profile settings page is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Open a briefing print view",
+    "description": "This verifies that a briefing-access user can open the print view for a briefing and see the printable layout.",
+    "category": "Briefings Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings module"
+      },
+      {
+        "type": "action",
+        "description": "Open a briefing"
+      },
+      {
+        "type": "action",
+        "description": "Open the briefing print view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a printable briefing layout is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "Respect role-based access across protected modules",
+    "description": "This verifies that a logged-in user only sees the modules allowed for their role and cannot access a restricted module through normal navigation.",
+    "category": "Root workspace routing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda-global"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /briefings"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /oficios"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the allowed module is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify restricted access is not shown"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Keep a claimed task from being claimed twice",
+    "description": "This verifies that once a communication role is claimed, the board prevents the same role from being claimed again through normal UI interactions.",
+    "category": "Communication Claiming Board",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the communication agenda module"
+      },
+      {
+        "type": "action",
+        "description": "Click an available communication task"
+      },
+      {
+        "type": "action",
+        "description": "Claim a production role on the task"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to claim the same role again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the role remains assigned to the first claimant"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Require briefing content before saving",
+    "description": "This verifies that the briefing form blocks saving when required briefing fields are left empty and shows a validation error.",
+    "category": "Briefings Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the briefings module"
+      },
+      {
+        "type": "action",
+        "description": "Open the new briefing form"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to save the empty briefing form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the briefing is not added to the list"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC024",
+    "title": "Prevent duplicate claiming of a communication task role",
+    "description": "This verifies that a claimed communication task cannot be claimed again by another attempt and that the claimed state remains intact.",
+    "category": "agenda-comunicacao",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /agenda-comunicacao"
+      },
+      {
+        "type": "action",
+        "description": "Open an available communication task"
+      },
+      {
+        "type": "action",
+        "description": "Claim a production role on the task"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to claim the same task role again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the task remains assigned to the existing claim"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC025",
+    "title": "Reject invalid login credentials",
+    "description": "This verifies that invalid email or password entries are blocked and a validation error is shown.",
+    "category": "User Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with invalid@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with invalid-password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a login validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC026",
+    "title": "Show an empty communication board state",
+    "description": "This verifies that the communication board presents an empty state when there are no visible tasks after filtering.",
+    "category": "Communication Claiming Board",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "action",
+        "description": "Click the communication agenda module"
+      },
+      {
+        "type": "action",
+        "description": "Select filters that narrow the board to no visible tasks"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty state message is displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]

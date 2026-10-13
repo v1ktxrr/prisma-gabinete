@@ -1,0 +1,29 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "prisma-app",
+    "main": ".vercel/output/static/_worker.js/index.js",
+    "compatibility_date": "2024-09-23",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "no_bundle": true,
+    "rules": [
+        {
+            "type": "ESModule",
+            "globs": ["**/*.js"]
+        }
+    ],
+    "assets": {
+        "directory": ".vercel/output/static",
+        "binding": "ASSETS"
+    },
+    "observability": {
+        "enabled": true
+    },
+    "services": [
+        {
+            "binding": "WORKER_SELF_REFERENCE",
+            "service": "prisma-app"
+        }
+    ]
+}

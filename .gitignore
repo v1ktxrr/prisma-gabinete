@@ -1,0 +1,110 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+.agent/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# security: explicit env and secret/key artifacts
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+secrets.*
+*.secret
+
+# local runtime artifacts
+*.log
+err.txt
+out.txt
+pid.txt
+temp-next/
+
+# local auth test script with temporary credentials
+test-login.mjs
+test-oficios.mjs
+supabase/.temp/
+
+testsprite_tests/tmp/
+
+# GSD local planning directory
+.planning/
+
+# cloudflare local build directories
+.open-next/
+.wrangler/
+
+# Python venv & Graphify
+.venv/
+graphify-out/
+
+# --- Shared Brain: segredos e dados sensíveis nunca entram no Git ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+id_rsa*
+*credentials*.json
+auth_info*/
+*.sqlite
+*.sqlite3
+*.db
+# --- pesados e gerados ---
+node_modules/
+__pycache__/
+.venv/
+venv/
+dist/
+build/
+.next/
+.pyinstaller_cache/
+.pytest_cache/
+*.log
+.DS_Store

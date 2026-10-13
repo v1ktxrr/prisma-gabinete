@@ -1,0 +1,495 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-bricolage), sans-serif;
+  --font-sans: var(--font-manrope), sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --radius: 0.5rem;
+}
+
+/* ============================================================
+   PRISMA APP — Global Styles (GovTech UI)
+   ============================================================ */
+
+/* Safe area for notch (iPhone) */
+:root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+
+  /* Light Theme - GovTech (Claro Institucional MS) */
+  --background: #f8fafc;
+  /* slate-50 */
+  --foreground: #0f172a;
+  /* slate-900 */
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --border: #e2e8f0;
+
+  --primary: #165cfb;
+  /* Azul Prisma Exato */
+  --primary-foreground: #ffffff;
+  --primary-hover: #124bd1;
+
+  --secondary: #008744;
+  /* Verde MS */
+  --secondary-foreground: #ffffff;
+  --secondary-hover: #006633;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+}
+
+.dark {
+  /* Dark Theme - Elegante e sem neon exagerado */
+  --background: #0f172a;
+  /* slate-900 */
+  --foreground: #f8fafc;
+  /* slate-50 */
+
+  --card: #1e293b;
+  /* slate-800 */
+  --card-foreground: #f8fafc;
+
+  --border: #334155;
+
+  --primary: #165cfb;
+  /* Azul Prisma adaptado para dark */
+  --primary-foreground: #ffffff;
+  --primary-hover: #124bd1;
+
+  --secondary: #00a651;
+  /* Verde MS adaptado para dark */
+  --secondary-foreground: #ffffff;
+  --secondary-hover: #008744;
+
+  --muted: #1e293b;
+  /* slate-800 */
+  --muted-foreground: #94a3b8;
+  /* slate-400 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================================================
+   FullCalendar Overrides (Minimalist & Dark Mode)
+   ============================================================ */
+/* --- FULLCALENDAR: LIGHT MODE (Padrão) --- */
+.fc .fc-col-header-cell {
+  background-color: transparent !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  border: none !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.fc .fc-button-primary {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: none !important;
+  text-transform: capitalize !important;
+  transition: all 0.3s ease-out;
+  border-radius: 0.5rem !important;
+}
+
+.fc .fc-button-active,
+.fc .fc-button-primary:hover {
+  background-color: #f8fafc !important;
+  color: #165cfb !important;
+  border-color: #cbd5e1 !important;
+  font-weight: bold !important;
+}
+
+.fc .fc-toolbar-title {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+.fc-theme-standard th,
+.fc-theme-standard td,
+.fc .fc-scrollgrid {
+  border-color: #f1f5f9 !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+}
+
+/* ============================================================
+   Segmented Controls (Pill Style) para Barra do FullCalendar
+   ============================================================ */
+.fc .fc-toolbar-chunk:last-child>div {
+  display: inline-flex;
+  padding: 0.25rem;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  border: none;
+}
+
+.fc .fc-button-group>.fc-button {
+  border: none !important;
+  background-color: transparent !important;
+  color: #64748b !important;
+  border-radius: 9999px !important;
+  padding: 0.375rem 1rem !important;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.fc .fc-button-group>.fc-button:hover {
+  color: #334155 !important;
+}
+
+.fc .fc-button-group>.fc-button:active {
+  transform: scale(0.95);
+}
+
+.fc .fc-button-group>.fc-button-active {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ============================================================
+   FullCalendar List View: Fix text colors
+   ============================================================ */
+.fc-list-event .fc-list-event-title a {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+.fc-list-event .fc-list-event-time {
+  color: #64748b !important;
+}
+
+.fc-list-event .fc-list-event-graphic .fc-list-event-dot {
+  border-color: currentColor !important;
+}
+
+.fc-list-event td {
+  border-color: #f1f5f9 !important;
+}
+
+.fc .fc-list-day-cushion {
+  background-color: #f8fafc !important;
+}
+
+.fc .fc-list-day-text,
+.fc .fc-list-day-side-text {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+/* ============================================================
+   FullCalendar Drag and Drop UX
+   ============================================================ */
+/* O espelho (mirror) que segue o cursor */
+.fc-event-mirror {
+  opacity: 0.95 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  cursor: grabbing !important;
+  border-radius: 4px !important;
+  z-index: 9999 !important;
+}
+
+/* O elemento original que fica parado na grid de onde foi retirado */
+.fc-event-dragging:not(.fc-event-mirror) {
+  opacity: 0.2 !important;
+  filter: grayscale(100%);
+}
+/* ============================================================
+   Skeleton Shimmer Animation
+   ============================================================ */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg, var(--muted) 25%, var(--border) 50%, var(--muted) 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* ============================================================
+   PRINT MODIFIERS (A4 / PDF Export)
+   ============================================================ */
+@media print {
+  body {
+    background-color: transparent !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Oculta elementos que não devem ir pro PDF usando classes nativas do tailwind print:hidden também, mas garanto via CSS global */
+  .print-hidden,
+  button,
+  header,
+  nav,
+  footer,
+  [role="dialog"],
+  /* Extensões de Navegador (Grammarly, LanguageTool, Mote, Speechify, etc.) */
+  grammarly-extension,
+  grammarly-popover,
+  grammarly-desktop-integration,
+  mote-recorder,
+  mote-container,
+  [class*="speechify"],
+  [id*="speechify"],
+  [class*="languagetool"],
+  .lt-tooltip,
+  .lt-toolbar,
+  #read-aloud-player,
+  .goog-te-banner-frame {
+    display: none !important;
+  }
+
+  /* Evita quebras no meio de cartões/tabelas */
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Tira bordas, sombras e backgrounds coloridos para limpar a folha */
+  * {
+    box-shadow: none !important;
+  }
+
+  .print-bg-white {
+    background-color: white !important;
+  }
+
+  .print-border-clean {
+    border-color: #e2e8f0 !important;
+  }
+}
+
+.tiptap p + p,
+.briefing-html p + p {
+  margin-top: 0.9rem;
+}
+
+.tiptap ul,
+.briefing-html ul,
+.tiptap ol,
+.briefing-html ol {
+  margin-left: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.tiptap ul,
+.briefing-html ul {
+  list-style: disc;
+}
+
+.tiptap ol,
+.briefing-html ol {
+  list-style: decimal;
+}
+
+.tiptap strong,
+.briefing-html strong {
+  font-weight: 700;
+}
+
+.tiptap u,
+.briefing-html u {
+  text-decoration: underline;
+}
+
+.tiptap mark,
+.briefing-html mark {
+  padding: 0 0.12rem;
+  border-radius: 0.15rem;
+}
+
+.tiptap img,
+.briefing-html img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.85rem 0;
+}
+
+/* ============================================================
+   COMMUNICATION THEME OVERRIDES (Agenda de Comunicação)
+   ============================================================ */
+.theme-comunicacao .fc .fc-button-primary {
+  background-color: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.theme-comunicacao .fc .fc-button-active,
+.theme-comunicacao .fc .fc-button-primary:hover {
+  background-color: #f5f3ff !important;
+  color: #7c3aed !important;
+  border-color: #ddd6fe !important;
+  font-weight: bold !important;
+}
+
+.theme-comunicacao .fc .fc-toolbar-title {
+  color: #4c1d95 !important; /* purple-900 */
+}
+
+.theme-comunicacao .fc .fc-button-group>.fc-button-active {
+  background-color: #ffffff !important;
+  color: #7c3aed !important;
+  box-shadow: 0 1px 3px 0 rgba(124, 58, 237, 0.15) !important;
+}
+
+.theme-comunicacao .fc .fc-col-header-cell {
+  background-color: #fdf4ff !important; /* fuchsia-50 */
+  color: #86198f !important; /* fuchsia-800 */
+  border-bottom: 2px solid #fae8ff !important;
+}
+
+.theme-comunicacao .fc-theme-standard th,
+.theme-comunicacao .fc-theme-standard td,
+.theme-comunicacao .fc .fc-scrollgrid {
+  border-color: #fdf4ff !important;
+}
+
+.theme-comunicacao .fc .fc-day-today {
+  background-color: rgba(250, 232, 255, 0.3) !important; /* Tint today cell with soft fuchsia/violet */
+}
+
+/* Rounded corners and modern aesthetics for events in Communication Mode */
+.theme-comunicacao .fc-daygrid-event,
+.theme-comunicacao .fc-v-event,
+.theme-comunicacao .fc-h-event,
+.theme-comunicacao .fc-event {
+  border-radius: 8px !important;
+  padding: 2px 4px !important;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+  font-weight: 500 !important;
+  border-width: 1px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.2s ease-out !important;
+}
+
+.theme-comunicacao .fc-daygrid-event:hover,
+.theme-comunicacao .fc-v-event:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.theme-comunicacao .fc-list-event {
+  border-radius: 8px !important;
+}
+
+/* ============================================================
+   Tiptap Tables Styling (GovTech)
+   ============================================================ */
+.tiptap table,
+.briefing-html table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.tiptap td,
+.tiptap th,
+.briefing-html td,
+.briefing-html th {
+  min-width: 1em;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+}
+
+.tiptap th,
+.briefing-html th {
+  font-weight: bold;
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.tiptap td,
+.briefing-html td {
+  color: var(--foreground);
+}
+
+.tiptap .selectedCell:after,
+.briefing-html .selectedCell:after {
+  background: rgba(22, 92, 251, 0.08);
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.tiptap .column-resize-handle,
+.briefing-html .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: -2px;
+  width: 4px;
+  background-color: var(--primary);
+  pointer-events: none;
+}
+
+/* ============================================================
+   Custom Scrollbar Utility
+   ============================================================ */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
