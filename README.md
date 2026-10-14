@@ -153,37 +153,29 @@ src/data/                 Dados estáticos de apoio
 supabase/                 SQLs, migrations e Edge Functions
 ```
 
-## Configuração Local
+## 🧪 Ambiente de Testes e Demonstração (Quick Start em 1 Minuto)
 
-### 1. Instalar dependências
+> **Nota:** Este repositório é disponibilizado como referência técnica de engenharia, arquitetura e avaliação de fluxos para a comunidade GovTech.
+
+Para rodar localmente sem precisar criar conta ou configurar banco de dados do zero:
+
+### 1. Clonar e Instalar Dependências
 
 ```bash
+git clone https://github.com/v1ktxrr/prisma-gabinete.git
+cd prisma-gabinete
 npm install
 ```
 
-### 2. Configurar ambiente
+### 2. Copiar o Ambiente de Teste
 
-Crie `.env.local` na raiz do projeto:
+O arquivo `.env.example` já vem pré-configurado com as credenciais da instância pública de demonstração (Sandbox):
 
-```env
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-SUPABASE_ACCESS_TOKEN=
-GOOGLE_APPS_SCRIPT_URL=
+```bash
+cp .env.example .env.local
 ```
 
-Variáveis usadas por integrações sociais e Edge Functions:
-
-```env
-META_PAGE_ID=
-META_ACCESS_TOKEN=
-APIFY_API_TOKEN=
-```
-
-Nunca versione `.env`, `.env.local`, chaves privadas ou certificados.
-
-### 3. Rodar em desenvolvimento
+### 3. Iniciar o Servidor Local
 
 ```bash
 npm run dev
@@ -191,7 +183,23 @@ npm run dev
 
 Acesse [http://localhost:3000](http://localhost:3000).
 
-### 4. Validar o projeto
+---
+
+### 🔑 Contas de Teste Pré-Configuradas
+
+O ambiente sandbox já possui usuários criados para validação dos diferentes níveis de permissão e RBAC do sistema:
+
+| Perfil / Cargo | E-mail de Acesso | Senha Padrão | Módulos e Visão |
+| :--- | :--- | :--- | :--- |
+| **Chefe de Gabinete** | `chefe@exemplo.com` | `Prisma@Temporaria123` | Visão Geral, Auditoria, Pautas e Aprovações |
+| **Secretária Executiva** | `secretaria@exemplo.com` | `Prisma@Temporaria123` | Agenda Oficial, Briefings e Impressão |
+| **Comunicação** | `comunicacao@exemplo.com` | `Prisma@Temporaria123` | Calendário de Pautas, Métricas e Redes |
+| **Assessor de Campo** | `assessor@exemplo.com` | `Prisma@Temporaria123` | Registro de Campo e Prestação de Contas |
+| **Cockpit de Root** | `admin@exemplo.com` | `Prisma@Temporaria123` | Console Administrativo (`/deviktor-sys`) |
+
+---
+
+### 4. Validar o Projeto
 
 ```bash
 npm run lint
